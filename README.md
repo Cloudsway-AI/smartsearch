@@ -46,7 +46,7 @@ To use this server with a client like OpenWebUI or Claude Desktop, add the follo
       "command": "npx",
       "args": [
         "-y",
-        "@zachtian/smartsearch"
+        "@zachtian/smartsearch@0.1.0"
       ],
       "env": {
         "SERVER_KEY": "YOUR_API_KEY_HERE"
