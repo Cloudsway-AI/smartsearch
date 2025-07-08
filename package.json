@@ -1,5 +1,5 @@
 {
-  "name": "@zachtian/smartsearch",
+  "name": "@cloudsway-ai/smartsearch",
   "version": "0.1.0",
   "description": "MCP server for a smart search API",
   "license": "MIT",

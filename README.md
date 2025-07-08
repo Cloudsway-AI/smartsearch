@@ -1,52 +1,52 @@
-# Smart Search MCP Server
+# 智能搜索 MCP 服务器
 
-An MCP server implementation that integrates a remote smart search API, providing powerful web search capabilities.
+一个集成了远程智能搜索 API 的 MCP 服务器实现，提供强大的网页搜索功能。
 
-## Features
+## 特性
 
--   **Web Search**: Perform web searches with controls for result count, pagination, language, and safety level.
--   **Structured JSON Output**: All search results are returned in a clean JSON format.
--   **Easy Integration**: Designed for seamless use with any MCP-compatible client.
+-   **网页搜索**：支持关键词检索，并可控制结果数量、分页、语言和安全等级。
+-   **结构化 JSON 输出**：所有搜索结果均以清晰的 JSON 格式返回。
+-   **轻松集成**：为与任何兼容 MCP 的客户端无缝使用而设计。
 
-## Tools
+## 工具
 
 ### `smart_search`
 
-Executes a web search with filtering and pagination options.
+执行网页搜索，支持过滤和分页选项。
 
-**Inputs:**
+**输入参数：**
 
--   `query` (string): The search terms.
--   `count` (number, optional): The number of results to return (default: 10).
--   `offset` (number, optional): The pagination offset (default: 0).
--   `setLang` (string, optional): The language for the search (e.g., 'en', 'zh', default: 'en').
--   `safeSearch` (string, optional): The safety level ('Strict', 'Moderate', 'Off', default: 'Strict').
+-   `query` (string): 搜索关键词。
+-   `count` (number, optional): 返回结果的数量 (默认: 10)。
+-   `offset` (number, optional): 分页偏移量 (默认: 0)。
+-   `setLang` (string, optional): 搜索语言 (例如, 'en', 'zh', 默认: 'en')。
+-   `safeSearch` (string, optional): 安全等级 ('Strict', 'Moderate', 'Off', 默认: 'Strict')。
 
-## Configuration
+## 配置
 
-### Getting an API Key
+### 获取 API 密钥
 
-1.  Sign up for an account with the search API provider.
-2.  Generate your API key. The key should be in the format `endpoint-apikey`.
+1.  注册一个搜索 API 提供商的账户。
+2.  生成您的 API 密钥。密钥格式应为 `endpoint-apikey`。
 
-### Environment Variable
+### 环境变量
 
-This server requires the `SERVER_KEY` environment variable to be set to your API key.
+此服务器需要设置 `SERVER_KEY` 环境变量为您的 API 密钥。
 
-## Usage with an MCP Client
+## 在 MCP 客户端中使用
 
-To use this server with a client like OpenWebUI or Claude Desktop, add the following configuration. This example uses `npx` to run the server directly from the npm registry.
+要将此服务器与 OpenWebUI 或 Claude Desktop 等客户端一起使用，请添加以下配置。此示例使用 `npx` 直接从 npm 注册表运行服务器。
 
-**NPX Configuration:**
+**NPX 配置:**
 
 ```json
 {
   "mcpServers": {
-    "smart-search": {
+    "smartsearch": {
       "command": "npx",
       "args": [
         "-y",
-        "@zachtian/smartsearch@0.1.0"
+        "@cloudsway-ai/smartsearch@0.1.0"
       ],
       "env": {
         "SERVER_KEY": "YOUR_API_KEY_HERE"
@@ -56,6 +56,6 @@ To use this server with a client like OpenWebUI or Claude Desktop, add the follo
 }
 ```
 
-## License
+## 许可证
 
-This MCP server is released under the MIT License. See the LICENSE file for more details.
+此 MCP 服务器根据 MIT 许可证发布。更多详情请参阅 LICENSE 文件。
