@@ -40,7 +40,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@cloudsway-ai/smartsearch@0.1.0"
+        "@cloudsway-ai/smartsearch@0.1.1"
       ],
       "env": {
         "SERVER_KEY": "YOUR_API_KEY_HERE"

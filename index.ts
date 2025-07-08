@@ -9,7 +9,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 const SMART_SEARCH_TOOL: Tool = {
-  name: "smart_search",
+  name: "smartsearch",
   description: "Performs a web search using a remote smart search API.",
   inputSchema: {
     type: "object",
@@ -77,11 +77,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     const { name, arguments: args } = request.params;
 
-    if (name !== "smart_search") {
+    if (name !== "smartsearch") {
       throw new Error(`Unknown tool: ${name}`);
     }
     if (!args || typeof args.query !== 'string') {
-        throw new Error("Invalid arguments for smart_search. 'query' is required.");
+        throw new Error("Invalid arguments for smartsearch. 'query' is required.");
     }
 
     const result = await performSmartSearch(args);
