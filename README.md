@@ -1,43 +1,37 @@
-# 智能搜索 MCP 服务器
+# SmartSearch MCP Server
 
-一个集成了远程智能搜索 API 的 MCP 服务器实现，提供强大的网页搜索功能。
+一个集成远程Cloudsway智能搜索 API 的 MCP 服务器，实现网页搜索功能。
 
 ## 特性
 
--   **网页搜索**：支持关键词检索，并可控制结果数量、分页、语言和安全等级。
--   **结构化 JSON 输出**：所有搜索结果均以清晰的 JSON 格式返回。
--   **轻松集成**：为与任何兼容 MCP 的客户端无缝使用而设计。
+- **网页搜索**：支持关键词检索、分页、语言和安全等级选项
+- **结构化返回**：所有结果以 JSON 格式返回
+- **平台兼容**：适用于 ModelScope MCP 平台及兼容客户端
 
 ## 工具
 
-### `smart_search`
+### SmartSearch
 
-执行网页搜索，支持过滤和分页选项。
-
-**输入参数：**
-
--   `query` (string): 搜索关键词。
--   `count` (number, optional): 返回结果的数量 (默认: 10)。
--   `offset` (number, optional): 分页偏移量 (默认: 0)。
--   `setLang` (string, optional): 搜索语言 (例如, 'en', 'zh', 默认: 'en')。
--   `safeSearch` (string, optional): 安全等级 ('Strict', 'Moderate', 'Off', 默认: 'Strict')。
+- 执行网页搜索，支持分页与安全选项
+- 输入参数：
+  - `query` (string)：搜索关键词
+  - `count` (number, optional)：返回结果数量（默认10）
+  - `offset` (number, optional)：分页偏移（默认0）
+  - `setLang` (string, optional)：搜索语言（默认'en'）
+  - `safeSearch` (string, optional)：安全搜索等级（默认'Strict'）
 
 ## 配置
 
 ### 获取 API 密钥
+1. 登录 [www.cloudsway.ai](www.cloudsway.ai) 或联系 info@cloudsway.ai 获取Endpoint 和 AccessKey
+2. 按照 `{Endpoint}-{AccessKey}` 格式组成`SERVER_KEY`
 
-1.  注册一个搜索 API 提供商的账户。
-2.  生成您的 API 密钥。密钥格式应为 `endpoint-apikey`。
+### ModelScope 部署
 
-### 环境变量
+- 在 ModelScope 部署本工具时，**在环境变量配置区填写你的 API 密钥（SERVER_KEY）**
+- 入口文件：`src/smartsearch/smartsearch.py`
 
-此服务器需要设置 `SERVER_KEY` 环境变量为您的 API 密钥。
-
-## 在 MCP 客户端中使用
-
-要将此服务器与 OpenWebUI 或 Claude Desktop 等客户端一起使用，请添加以下配置。此示例使用 `npx` 直接从 npm 注册表运行服务器。
-
-**NPX 配置:**
+### 服务配置示例
 
 ```json
 {
@@ -58,4 +52,4 @@
 
 ## 许可证
 
-此 MCP 服务器根据 MIT 许可证发布。更多详情请参阅 LICENSE 文件。
+本 MCP 服务器基于 MIT License 发布。你可以自由使用、修改和分发本软件，但需遵守 MIT License 条款。详情请参阅项目中的 LICENSE 文件。
