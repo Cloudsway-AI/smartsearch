@@ -6,7 +6,7 @@ An MCP server integrating the remote Cloudsway Smart Search API, providing web s
 
 - **Web Search**: Supports keyword search, pagination, language, and safety level options
 - **Structured Output**: All results are returned in JSON format
-- **Platform Compatibility**: Suitable for ModelScope MCP platform and compatible clients
+- **Platform Compatibility**: Suitable for MCP platform and compatible clients
 
 ## Tools
 
@@ -26,9 +26,9 @@ An MCP server integrating the remote Cloudsway Smart Search API, providing web s
 1. Log in to [www.cloudsway.ai](https://www.cloudsway.ai) or contact info@cloudsway.ai to get your Endpoint and AccessKey.
 2. Combine them in the format `{Endpoint}-{AccessKey}` to form your `SERVER_KEY`.
 
-### ModelScope Deployment
+### Deployment
 
-- When deploying this tool on ModelScope, **enter your API key (`SERVER_KEY`) in the environment variable configuration area**.
+- When deploying this tool, **enter your API key (`SERVER_KEY`) in the environment variable configuration area**.
 - Entry file: `src/smartsearch/smartsearch.py`
 
 ### Example Service Configuration
